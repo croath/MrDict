@@ -18,6 +18,7 @@
 		2719C49E17FD01DF00DF47A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2719C49C17FD01DF00DF47A6 /* InfoPlist.strings */; };
 		2719C4A017FD01DF00DF47A6 /* mrdictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719C49F17FD01DF00DF47A6 /* mrdictTests.m */; };
 		2719C4AB17FD5D8000DF47A6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2719C4AA17FD5D8000DF47A6 /* MainMenu.xib */; };
+		2719C4B617FD686200DF47A6 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2719C4B517FD684E00DF47A6 /* libFMDB.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2719C47117FD01DF00DF47A6;
 			remoteInfo = mrdict;
+		};
+		2719C4B217FD684E00DF47A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
+			remoteInfo = fmdb;
+		};
+		2719C4B417FD684E00DF47A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE4290EF12B42F870088BD94;
+			remoteInfo = FMDB;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,6 +65,7 @@
 		2719C49D17FD01DF00DF47A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2719C49F17FD01DF00DF47A6 /* mrdictTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mrdictTests.m; sourceTree = "<group>"; };
 		2719C4AA17FD5D8000DF47A6 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fmdb.xcodeproj; path = Dependencies/fmdb/fmdb.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719C4B617FD686200DF47A6 /* libFMDB.a in Frameworks */,
 				2719C47617FD01DF00DF47A6 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2719C47B17FD01DF00DF47A6 /* mrdict */,
+				2719C4AC17FD683A00DF47A6 /* Denpendencies */,
 				2719C49917FD01DF00DF47A6 /* mrdictTests */,
 				2719C47417FD01DF00DF47A6 /* Frameworks */,
 				2719C47317FD01DF00DF47A6 /* Products */,
@@ -154,6 +172,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2719C4AC17FD683A00DF47A6 /* Denpendencies */ = {
+			isa = PBXGroup;
+			children = (
+				2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */,
+			);
+			name = Denpendencies;
+			sourceTree = "<group>";
+		};
+		2719C4AE17FD684D00DF47A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2719C4B317FD684E00DF47A6 /* fmdb */,
+				2719C4B517FD684E00DF47A6 /* libFMDB.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +252,12 @@
 			mainGroup = 2719C46917FD01DF00DF47A6;
 			productRefGroup = 2719C47317FD01DF00DF47A6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2719C4AE17FD684D00DF47A6 /* Products */;
+					ProjectRef = 2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2719C47117FD01DF00DF47A6 /* mrdict */,
@@ -224,6 +265,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2719C4B317FD684E00DF47A6 /* fmdb */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = fmdb;
+			remoteRef = 2719C4B217FD684E00DF47A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2719C4B517FD684E00DF47A6 /* libFMDB.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFMDB.a;
+			remoteRef = 2719C4B417FD684E00DF47A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2719C47017FD01DF00DF47A6 /* Resources */ = {
@@ -306,7 +364,7 @@
 		2719C4A117FD01DF00DF47A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -337,13 +395,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "./**";
 			};
 			name = Debug;
 		};
 		2719C4A217FD01DF00DF47A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -368,6 +427,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "./**";
 			};
 			name = Release;
 		};

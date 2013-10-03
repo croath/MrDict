@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "FMDatabase.h"
 
 @interface AppDelegate(){
     NSTimer *_timer;
+    FMDatabase *_db;
 }
 
 @end
@@ -20,6 +22,10 @@
 {
     // Insert code here to initialize your application
     [self activateStatusMenu];
+}
+
+- (void)initDatabase{
+    _db = [FMDatabase databaseWithPath:@""];
 }
 
 - (void)activateStatusMenu
