@@ -5,10 +5,20 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="bKg-os-T9O" id="CC1-k8-jJC"/>
+                <outlet property="menu" destination="1lx-Tg-Dda" id="HVc-Yy-r1j"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
         <customObject id="371" customClass="NSFontManager"/>
+        <customObject id="bKg-os-T9O" customClass="AppDelegate">
+            <connections>
+                <outlet property="menu" destination="1lx-Tg-Dda" id="E1v-Ot-xqf"/>
+            </connections>
+        </customObject>
         <menu title="Main Menu" systemMenu="main" id="29">
             <items>
                 <menuItem title="NewApplication" id="56">
@@ -647,7 +657,7 @@
         </menu>
         <menu autoenablesItems="NO" id="1lx-Tg-Dda">
             <items>
-                <menuItem title="开机启动" id="vKi-dm-BlJ">
+                <menuItem title="开机启动 ☐" id="vKi-dm-BlJ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="cLi-t4-Df9"/>
