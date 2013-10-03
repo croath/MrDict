@@ -19,6 +19,8 @@
 		2719C4A017FD01DF00DF47A6 /* mrdictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719C49F17FD01DF00DF47A6 /* mrdictTests.m */; };
 		2719C4AB17FD5D8000DF47A6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2719C4AA17FD5D8000DF47A6 /* MainMenu.xib */; };
 		2719C4B617FD686200DF47A6 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2719C4B517FD684E00DF47A6 /* libFMDB.a */; };
+		2719C4BC17FD8A5C00DF47A6 /* toefl.db in Resources */ = {isa = PBXBuildFile; fileRef = 2719C4B817FD710D00DF47A6 /* toefl.db */; };
+		2719C4BE17FD8A7A00DF47A6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2719C4BD17FD8A7A00DF47A6 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		2719C49F17FD01DF00DF47A6 /* mrdictTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mrdictTests.m; sourceTree = "<group>"; };
 		2719C4AA17FD5D8000DF47A6 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fmdb.xcodeproj; path = Dependencies/fmdb/fmdb.xcodeproj; sourceTree = "<group>"; };
+		2719C4B817FD710D00DF47A6 /* toefl.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = toefl.db; sourceTree = "<group>"; };
+		2719C4BD17FD8A7A00DF47A6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719C4BE17FD8A7A00DF47A6 /* libsqlite3.0.dylib in Frameworks */,
 				2719C4B617FD686200DF47A6 /* libFMDB.a in Frameworks */,
 				2719C47617FD01DF00DF47A6 /* Cocoa.framework in Frameworks */,
 			);
@@ -113,6 +118,7 @@
 		2719C47417FD01DF00DF47A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2719C4BD17FD8A7A00DF47A6 /* libsqlite3.0.dylib */,
 				2719C47517FD01DF00DF47A6 /* Cocoa.framework */,
 				2719C49417FD01DF00DF47A6 /* XCTest.framework */,
 				2719C47717FD01DF00DF47A6 /* Other Frameworks */,
@@ -137,6 +143,7 @@
 				2719C48817FD01DF00DF47A6 /* AppDelegate.m */,
 				2719C4AA17FD5D8000DF47A6 /* MainMenu.xib */,
 				2719C48D17FD01DF00DF47A6 /* Images.xcassets */,
+				2719C4B717FD710100DF47A6 /* db */,
 				2719C47C17FD01DF00DF47A6 /* Supporting Files */,
 			);
 			path = mrdict;
@@ -187,6 +194,14 @@
 				2719C4B517FD684E00DF47A6 /* libFMDB.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2719C4B717FD710100DF47A6 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				2719C4B817FD710D00DF47A6 /* toefl.db */,
+			);
+			path = db;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2719C4BC17FD8A5C00DF47A6 /* toefl.db in Resources */,
 				2719C48017FD01DF00DF47A6 /* InfoPlist.strings in Resources */,
 				2719C48E17FD01DF00DF47A6 /* Images.xcassets in Resources */,
 				2719C48617FD01DF00DF47A6 /* Credits.rtf in Resources */,
