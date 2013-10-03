@@ -120,4 +120,14 @@
     [_statusItem setTitle:[self popWords]];
 }
 
+- (IBAction)startPressed:(id)sender {
+}
+
+- (IBAction)aboutPressed:(id)sender {
+    [NSApp orderFrontStandardAboutPanel:nil];
+}
+
+- (IBAction)closePressed:(id)sender {
+    [NSApp terminate:nil];
+}
 @end

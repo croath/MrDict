@@ -17,15 +17,16 @@
         <customObject id="bKg-os-T9O" customClass="AppDelegate">
             <connections>
                 <outlet property="menu" destination="1lx-Tg-Dda" id="E1v-Ot-xqf"/>
+                <outlet property="startItem" destination="vKi-dm-BlJ" id="WO3-Jg-FNi"/>
             </connections>
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="29">
             <items>
-                <menuItem title="NewApplication" id="56">
+                <menuItem title="Mr.Dict" id="56">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="NewApplication" systemMenu="apple" id="57">
+                    <menu key="submenu" title="Mr.Dict" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About NewApplication" id="58">
+                            <menuItem title="About Mr.Dict" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
@@ -57,7 +58,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="149"/>
-                            <menuItem title="Quit NewApplication" keyEquivalent="q" id="136">
+                            <menuItem title="Quit Mr.Dict" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="369"/>
                                 </connections>
@@ -659,13 +660,22 @@
             <items>
                 <menuItem title="开机启动 ☐" id="vKi-dm-BlJ">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startPressed:" target="bKg-os-T9O" id="eS0-JS-YPv"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="cLi-t4-Df9"/>
                 <menuItem title="关于" id="JCw-Ks-agB">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="aboutPressed:" target="bKg-os-T9O" id="oKn-wg-VW3"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="关闭" id="nCI-E8-adD">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="closePressed:" target="bKg-os-T9O" id="QTK-X3-eaj"/>
+                    </connections>
                 </menuItem>
             </items>
         </menu>

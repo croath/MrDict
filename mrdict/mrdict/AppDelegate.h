@@ -14,4 +14,8 @@
 @property (nonatomic, strong, readonly) NSStatusItem *statusItem;
 @property (strong) IBOutlet NSMenu *menu;
 
+@property (unsafe_unretained) IBOutlet NSMenuItem *startItem;
+- (IBAction)startPressed:(id)sender;
+- (IBAction)aboutPressed:(id)sender;
+- (IBAction)closePressed:(id)sender;
 @end
