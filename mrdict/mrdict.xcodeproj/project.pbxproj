@@ -62,6 +62,13 @@
 			remoteGlobalIDString = 734C379315414CE200994189;
 			remoteInfo = LaunchAtLoginHelper;
 		};
+		27A0949D182F4C6400B413D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE4290EE12B42F870088BD94;
+			remoteInfo = FMDB;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,7 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2719C47217FD01DF00DF47A6 /* mrdict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrdict.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2719C47217FD01DF00DF47A6 /* MrDict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrDict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2719C47517FD01DF00DF47A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2719C47817FD01DF00DF47A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2719C47917FD01DF00DF47A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -150,7 +157,7 @@
 		2719C47317FD01DF00DF47A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2719C47217FD01DF00DF47A6 /* mrdict.app */,
+				2719C47217FD01DF00DF47A6 /* MrDict.app */,
 				2719C49317FD01DF00DF47A6 /* mrdictTests.xctest */,
 			);
 			name = Products;
@@ -269,11 +276,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				27A0949E182F4C6400B413D1 /* PBXTargetDependency */,
 				27A09495182F45A800B413D1 /* PBXTargetDependency */,
 			);
 			name = mrdict;
 			productName = mrdict;
-			productReference = 2719C47217FD01DF00DF47A6 /* mrdict.app */;
+			productReference = 2719C47217FD01DF00DF47A6 /* MrDict.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2719C49217FD01DF00DF47A6 /* mrdictTests */ = {
@@ -416,6 +424,11 @@
 			name = LaunchAtLoginHelper;
 			targetProxy = 27A09494182F45A800B413D1 /* PBXContainerItemProxy */;
 		};
+		27A0949E182F4C6400B413D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			targetProxy = 27A0949D182F4C6400B413D1 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -525,7 +538,7 @@
 				GCC_PREFIX_HEADER = "mrdict/mrdict-Prefix.pch";
 				INFOPLIST_FILE = "mrdict/mrdict-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MrDict;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,7 +552,7 @@
 				GCC_PREFIX_HEADER = "mrdict/mrdict-Prefix.pch";
 				INFOPLIST_FILE = "mrdict/mrdict-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MrDict;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
