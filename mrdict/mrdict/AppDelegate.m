@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FMDatabase.h"
+#import <LLManager.h>
 
 @interface AppDelegate(){
     NSTimer *_timer;
@@ -24,6 +25,7 @@
 {
     // Insert code here to initialize your application
     [self activateStatusMenu];
+    [self checkLoginStatus];
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:10.0
                                               target:self
@@ -121,6 +123,21 @@
 }
 
 - (IBAction)startPressed:(id)sender {
+    if ([LLManager launchAtLogin]) {
+        [_startItem setTitle:@"开机启动 ☐"];
+    } else {
+        [_startItem setTitle:@"开机启动 ☑︎"];
+    }
+    
+    [LLManager setLaunchAtLogin:![LLManager launchAtLogin]];
+}
+
+- (void)checkLoginStatus{
+    if ([LLManager launchAtLogin]) {
+        [_startItem setTitle:@"开机启动 ☑︎"];
+    } else {
+        [_startItem setTitle:@"开机启动 ☐"];
+    }
 }
 
 - (IBAction)aboutPressed:(id)sender {
