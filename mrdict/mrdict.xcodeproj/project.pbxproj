@@ -21,6 +21,9 @@
 		2719C4B617FD686200DF47A6 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2719C4B517FD684E00DF47A6 /* libFMDB.a */; };
 		2719C4BC17FD8A5C00DF47A6 /* toefl.db in Resources */ = {isa = PBXBuildFile; fileRef = 2719C4B817FD710D00DF47A6 /* toefl.db */; };
 		2719C4BE17FD8A7A00DF47A6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2719C4BD17FD8A7A00DF47A6 /* libsqlite3.0.dylib */; };
+		27714B55182F456900EA111E /* LLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27714B54182F456900EA111E /* LLManager.m */; };
+		27A0949A182F479E00B413D1 /* LaunchAtLoginHelper.app in Copy Helper */ = {isa = PBXBuildFile; fileRef = 27714B58182F456900EA111E /* LaunchAtLoginHelper.app */; };
+		27A0949C182F483B00B413D1 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A0949B182F483B00B413D1 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,35 @@
 			remoteGlobalIDString = EE4290EF12B42F870088BD94;
 			remoteInfo = FMDB;
 		};
+		27714B57182F456900EA111E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27714B50182F456900EA111E /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 734C379415414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
+		27A09494182F45A800B413D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27714B50182F456900EA111E /* LaunchAtLoginHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 734C379315414CE200994189;
+			remoteInfo = LaunchAtLoginHelper;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27A09499182F476D00B413D1 /* Copy Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				27A0949A182F479E00B413D1 /* LaunchAtLoginHelper.app in Copy Helper */,
+			);
+			name = "Copy Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2719C47217FD01DF00DF47A6 /* mrdict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrdict.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +101,11 @@
 		2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fmdb.xcodeproj; path = Dependencies/fmdb/fmdb.xcodeproj; sourceTree = "<group>"; };
 		2719C4B817FD710D00DF47A6 /* toefl.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = toefl.db; sourceTree = "<group>"; };
 		2719C4BD17FD8A7A00DF47A6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		27714B4F182F456900EA111E /* LLStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLStrings.h; path = "LaunchAtLoginHelper-master/LLStrings.h"; sourceTree = "<group>"; };
+		27714B50182F456900EA111E /* LaunchAtLoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchAtLoginHelper.xcodeproj; path = "LaunchAtLoginHelper-master/LaunchAtLoginHelper.xcodeproj"; sourceTree = "<group>"; };
+		27714B53182F456900EA111E /* LLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLManager.h; path = "LaunchAtLoginHelper-master/LLManager.h"; sourceTree = "<group>"; };
+		27714B54182F456900EA111E /* LLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLManager.m; path = "LaunchAtLoginHelper-master/LLManager.m"; sourceTree = "<group>"; };
+		27A0949B182F483B00B413D1 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A0949C182F483B00B413D1 /* ServiceManagement.framework in Frameworks */,
 				2719C4BE17FD8A7A00DF47A6 /* libsqlite3.0.dylib in Frameworks */,
 				2719C4B617FD686200DF47A6 /* libFMDB.a in Frameworks */,
 				2719C47617FD01DF00DF47A6 /* Cocoa.framework in Frameworks */,
@@ -98,6 +135,10 @@
 		2719C46917FD01DF00DF47A6 = {
 			isa = PBXGroup;
 			children = (
+				27714B4F182F456900EA111E /* LLStrings.h */,
+				27714B50182F456900EA111E /* LaunchAtLoginHelper.xcodeproj */,
+				27714B53182F456900EA111E /* LLManager.h */,
+				27714B54182F456900EA111E /* LLManager.m */,
 				2719C47B17FD01DF00DF47A6 /* mrdict */,
 				2719C4AC17FD683A00DF47A6 /* Denpendencies */,
 				2719C49917FD01DF00DF47A6 /* mrdictTests */,
@@ -118,6 +159,7 @@
 		2719C47417FD01DF00DF47A6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27A0949B182F483B00B413D1 /* ServiceManagement.framework */,
 				2719C4BD17FD8A7A00DF47A6 /* libsqlite3.0.dylib */,
 				2719C47517FD01DF00DF47A6 /* Cocoa.framework */,
 				2719C49417FD01DF00DF47A6 /* XCTest.framework */,
@@ -204,6 +246,14 @@
 			path = db;
 			sourceTree = "<group>";
 		};
+		27714B51182F456900EA111E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27714B58182F456900EA111E /* LaunchAtLoginHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,10 +264,12 @@
 				2719C46E17FD01DF00DF47A6 /* Sources */,
 				2719C46F17FD01DF00DF47A6 /* Frameworks */,
 				2719C47017FD01DF00DF47A6 /* Resources */,
+				27A09499182F476D00B413D1 /* Copy Helper */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				27A09495182F45A800B413D1 /* PBXTargetDependency */,
 			);
 			name = mrdict;
 			productName = mrdict;
@@ -272,6 +324,10 @@
 					ProductGroup = 2719C4AE17FD684D00DF47A6 /* Products */;
 					ProjectRef = 2719C4AD17FD684D00DF47A6 /* fmdb.xcodeproj */;
 				},
+				{
+					ProductGroup = 27714B51182F456900EA111E /* Products */;
+					ProjectRef = 27714B50182F456900EA111E /* LaunchAtLoginHelper.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -294,6 +350,13 @@
 			fileType = archive.ar;
 			path = libFMDB.a;
 			remoteRef = 2719C4B417FD684E00DF47A6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27714B58182F456900EA111E /* LaunchAtLoginHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LaunchAtLoginHelper.app;
+			remoteRef = 27714B57182F456900EA111E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -326,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27714B55182F456900EA111E /* LLManager.m in Sources */,
 				2719C48917FD01DF00DF47A6 /* AppDelegate.m in Sources */,
 				2719C48217FD01DF00DF47A6 /* main.m in Sources */,
 			);
@@ -346,6 +410,11 @@
 			isa = PBXTargetDependency;
 			target = 2719C47117FD01DF00DF47A6 /* mrdict */;
 			targetProxy = 2719C49717FD01DF00DF47A6 /* PBXContainerItemProxy */;
+		};
+		27A09495182F45A800B413D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LaunchAtLoginHelper;
+			targetProxy = 27A09494182F45A800B413D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
