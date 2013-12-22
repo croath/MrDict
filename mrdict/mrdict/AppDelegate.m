@@ -27,7 +27,7 @@
     [self activateStatusMenu];
     [self checkLoginStatus];
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:10.0
+    _timer = [NSTimer scheduledTimerWithTimeInterval:15.0
                                               target:self
                                             selector:@selector(updateStatus)
                                             userInfo:nil
